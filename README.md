@@ -13,9 +13,14 @@
 
   > *You can copy the entire code block at once. No need to run each command individually*
   &nbsp;
-  1. copy the commands inside the block
+  1. Copy the commands inside the block
   2. Paste the commands in your terminal
-  3. Run the commands by pressing enter\
+  3. Run the commands by pressing ``Enter``
+  
+  > *The last command in every code block may not get run automatically. Press ``Enter`` to run the command manually.*\
+  
+  >*If prompted with ``Do you want to continue? [Y/n]``, run ``y``*
+  
 &nbsp;
 * Complete the steps in order from top to bottom\
 &nbsp;
@@ -39,10 +44,7 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
 sudo apt-get update
-sudo apt-get install git-core zlib1g-dev build-essential libssl-dev 
-libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-
-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs 
-yarn
+sudo apt-get install git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs yarn
 ```
 This will add the &nbsp;``Yarn`` &nbsp;and&nbsp; ``Node.js``&nbsp; repositories to your system.\
 &nbsp;
@@ -81,6 +83,9 @@ Now, onto the next step.\
 
 &nbsp;
 ### **Configure username and email:**
+> These next commands should be run separately in order to replace "YOUR NAME" and "YOUR@EMAIL<span>.com</span>"\
+> with your Github username and email before running.
+
 Run the following commands in your terminal:
 ```c
 git config --global color.ui true
@@ -88,7 +93,6 @@ git config --global user.name "YOUR NAME"
 git config --global user.email "YOUR@EMAIL.com"
 ssh-keygen -t rsa -b 4096 -C "YOUR@EMAIL.com"
 ```
-><span style="color: #06CF96">***Make sure you replace "YOUR NAME" and "YOUR@EMAIL<span>.com</span>" with your Github username and email.***</span>
 
 &nbsp;
 ### **Add SSH key:**
@@ -123,6 +127,16 @@ To verify that it worked, run this command in your terminal:
 ssh -T git@github.com
 ```
 &nbsp;\
+When prompted with:
+
+    The authenticity of host 'github.com (140.82.121.4)' can't be established.
+    RSA key fingerprint is SHA256:nAHS..........
+    Are you sure you want to continue connecting (yes/no/[fingerprint])?
+
+&nbsp;\
+run ``yes`` in your terminal\
+&nbsp;\
+&nbsp;&nbsp;\
 You should get a message like this:
 ```
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
@@ -146,8 +160,8 @@ It should output:
 ```
 Rails 6.1.4.1
 ```
-> *If you're getting a different output, your environment may not be set up properly.*\
-*Make sure you have completed all previous steps correctly.*
+> *If you're getting a different output, your environment may not be set up properly.* \
+> *Make sure you have completed all previous steps correctly.*
 
 &nbsp;\
 &nbsp;
@@ -155,15 +169,14 @@ Rails 6.1.4.1
 ### **Install ``PostgreSQL``:**
 Run the following command in your terminal:
 ```c
-sudo apt install postgresql-11 libpq-dev
+sudo apt install postgresql libpq-dev
 ```
 &nbsp;
 ### **Create a user:**
 Run the following command in your terminal:
 ```c
-sudo -u postgres createuser username -s
+sudo -u postgres createuser whoami -s
 ```
->*You can replace ``username`` with any name you like.*
 
 &nbsp;\
 &nbsp;
