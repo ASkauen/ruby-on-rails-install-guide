@@ -15,11 +15,10 @@
   &nbsp;
   1. Copy the commands inside the block
   2. Paste the commands in your terminal
-  3. Run the commands by pressing ``Enter``
-  
-  > *The last command in every code block may not get run automatically. Press ``Enter`` to run the command manually.*\
-  
-  >*If prompted with ``Do you want to continue? [Y/n]``, run ``y``*
+  3. Run the commands by pressing ``Enter``\
+  &nbsp;
+  > * *The last command in every code block may not get run automatically. Press ``Enter`` to run the command manually.* 
+  > * *If prompted with ``Do you want to continue? [Y/n]``, run ``y``*
   
 &nbsp;
 * Complete the steps in order from top to bottom\
@@ -79,7 +78,8 @@ Now, onto the next step.\
 &nbsp;
 
 ## ***Configuring Git:***
->**For this step you will need a Github account. [Register here](https://github.com/) if you don't have one already.**
+>**For this step you will need a Github account. [Register here](https://github.com/) if you don't have one already.** \
+>**If you already have Git configured, you can [skip this step](#installing-rails).**
 
 &nbsp;
 ### **Configure username and email:**
@@ -87,19 +87,34 @@ Now, onto the next step.\
 > with your Github username and email before running.
 
 Run the following commands in your terminal:
-```c
+
+```
 git config --global color.ui true
+```
+```
 git config --global user.name "YOUR NAME"
+```
+```
 git config --global user.email "YOUR@EMAIL.com"
+```
+```
 ssh-keygen -t rsa -b 4096 -C "YOUR@EMAIL.com"
 ```
+&nbsp;\
+You will be prompted with
 
+    Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa):
+    Enter passphrase (empty for no passphrase):
+    Enter same passphrase again:
+
+You can hit ``Enter`` for all three, unless you want to configure those options.\
 &nbsp;
 ### **Add SSH key:**
 Run the following command in your terminal:
 ```c
 cat ~/.ssh/id_rsa.pub
 ```
+
 &nbsp;\
 The output should look something like this:
 ```
