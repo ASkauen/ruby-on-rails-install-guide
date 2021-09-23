@@ -1,7 +1,7 @@
 # Ruby on Rails development environment setup guide
  ## ***How to follow this guide:***
 * Choose your operating system\
-    &nbsp; &nbsp; &nbsp;- [Ubuntu](#ubuntu)\
+    &nbsp; &nbsp; &nbsp;- [Linux](#linux)\
     &nbsp; &nbsp; &nbsp;- [MacOS](#macos)\
     &nbsp; &nbsp; &nbsp;- [Windows 10](#windows-10)
 * Read the instructions under your chosen oparating system
@@ -10,6 +10,7 @@
 
       This is
       a code block
+  >##### *⇧Don't run this⇧*
 
   &nbsp;
   1. Copy the commands inside the block
@@ -23,7 +24,7 @@
 &nbsp;
 * Complete the steps in order from top to bottom\
 &nbsp;
-## **Ubuntu:**
+## **Linux:**
 
 &nbsp;
 >### **Tips:**
@@ -33,7 +34,7 @@
 &nbsp;
 
 &nbsp;
-## ***Installing Ruby:***
+## ***Installing ``Ruby``:***
 ### **First we'll install some Ruby on Rails dependencies:**
 First run these commands to install curl:
 ```c
@@ -113,7 +114,9 @@ You will be prompted with
     Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa):
     Enter passphrase (empty for no passphrase):
     Enter same passphrase again:
+>##### *⇧Don't run this⇧*
 
+&nbsp;\
 You can hit ``Enter`` for all three, unless you want to configure those options.\
 &nbsp;
 ### **Add SSH key:**
@@ -133,6 +136,7 @@ UYEaIO6oo1mq4oMZ9Qqsa25Nq6yLL4AO+tOcZzEV6Qt9iRlRCUg/FZ5CFHb6w/joOZlE2H3CilOV/q3X
 Z6241+rYjZa5G3LLrrK1tViQxJaUsWk/VUAJJDhiuas88u2yt7ydQtF/gbBbMZQNHsu5Qw6N4BZOr9hTez+txosovDb20rE2
 +oPdM= your@email.com
 ```
+>##### *⇧Don't run this⇧*
 &nbsp;\
 **Add the SSH key to your Github:**
 >1. Copy the output
@@ -155,7 +159,9 @@ When prompted with:
     RSA key fingerprint is SHA256:nAHS..........
     Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
+>##### *⇧Don't run this⇧*
 
+&nbsp;\
 Run ``yes`` in your terminal.\
 &nbsp;\
 &nbsp;&nbsp;\
@@ -163,6 +169,7 @@ You should get a message like this:
 ```
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
+>##### *⇧Don't run this⇧*
 &nbsp;\
 &nbsp;
 
@@ -184,6 +191,9 @@ It should output:
 ```
 Rails 6.1.4.1
 ```
+>##### *⇧Don't run this⇧*
+
+&nbsp;
 > *If you're getting a different output, your environment may not be set up properly.* \
 > *Make sure you have completed all previous steps correctly.*
 
@@ -201,15 +211,14 @@ Run the following command in your terminal:
 ```c
 sudo -u postgres createuser $(whoami) -s
 ```
-This will create a new user under the name of your computer.\
-&nbsp;\
+
 &nbsp;\
 **If you want to set a password:**
 * Get your username by running the following command:
 ```
 whoami
 ```
->*This will output your username*
+
 
 &nbsp;
 * Then, run the following command:
@@ -243,3 +252,105 @@ rails server                  #starts the server
 
 &nbsp;\
 Go to http://localhost:3000 to look at your new app!
+
+&nbsp;\
+&nbsp;\
+&nbsp;
+## **MacOS:**
+
+&nbsp;
+>### **Tips:**
+>* Search for "Terminal" in spotlight search to open a new terminal
+>* Press &nbsp;``Command + V`` &nbsp; to paste text in your terminal
+>* Press &nbsp;``Command + C`` &nbsp; to copy text from your terminal\
+&nbsp;
+
+## ***Installing ``Ruby``:***
+
+### **First we need to install some dependencies:**
+### ***Install ``Homebrew``:***
+Run this command in your terminal: 
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+&nbsp;
+### ***Install ``Node.js``:***
+Run the following command in your terminal:
+```
+brew install nodejs
+```
+&nbsp;\
+To verify the installation, run:
+
+    node -v
+
+> *This should output the version of ``Node.js`` you just installed.*
+
+&nbsp;
+### ***Install ``rbenv``:***
+
+Run the following commands in your terminal:
+
+    brew install rbenv
+    echo 'eval "$(rbenv init -)"' >>~/.bash_profile
+    source ~/.bash_profile
+---
+&nbsp;
+### ***Install ``Ruby``:***
+Run the following commands in your terminal:
+
+    rbenv install 3.0.2
+    rbenv global 3.0.2
+&nbsp;
+### ***Install ``Bundler``:***
+Run the following commands in your terminal:
+
+    gem install bundler
+    rbenv rehash
+&nbsp;\
+&nbsp;
+
+## **Installing ``Rails``:**
+Run the following commands in your terminal:
+
+    gem install rails -v 6.1.4.1
+    rbenv rehash
+
+&nbsp;
+To verify the installation, run this command in your terminal:
+```c
+rails -v
+```
+&nbsp;\
+It should output:
+```
+Rails 6.1.4.1
+```
+>##### *⇧Don't run this⇧*
+
+&nbsp;
+> *If you're getting a different output, your environment may not be set up properly.* \
+> *Make sure you have completed all previous steps correctly.*
+
+&nbsp;\
+&nbsp;
+## ***Installing ``PostgreSQL``***
+
+Run the following commands in your terminal:
+
+    brew install postgresql@13
+    echo 'export PATH="/usr/local/opt/postgresql@13/bin:$PATH"' >> ~/.bash_profile
+    source ~/.bash_profile
+    brew services start postgresql@13
+
+To verify the installation, run this command in your terminal:
+```c
+postgres -V
+```
+&nbsp;\
+It should output:
+```
+Rails 6.1.4.1
+```
+>##### *⇧Don't run this⇧*
