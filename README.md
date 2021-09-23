@@ -35,8 +35,9 @@
 &nbsp;
 ## ***Installing Ruby:***
 ### **First we'll install some Ruby on Rails dependencies:**
-First we need to install curl:
+First run these commands to install curl:
 ```c
+sudo apt-get update
 sudo apt install curl
 ```
 Then, run the following commands in your terminal:
@@ -67,6 +68,8 @@ exec $SHELL
 rbenv install 3.0.2
 rbenv global 3.0.2
 ```
+> *This step might take a while*
+
 &nbsp;
 ### **Finally, install ``bundler``:**
 Run the following commands in your terminal:
@@ -217,11 +220,14 @@ sudo -u postgres psql
 * In ``postgres=#``, run ``\password username``, &nbsp;replacing&nbsp; ``username`` &nbsp;with your own.
 > *e.g. if you username is chris, the command will look like this:*
 ```
-postgres=# \password chris
+\password chris
 ```
 &nbsp;
 * Now enter the new password.
 > *When you're typing, you won't be able to any characters being entered.*
+
+&nbsp;
+* After setting and confirming your new password, press ``Ctrl + Z`` to exit out of the postgres command line.
 
 &nbsp;\
 &nbsp;
