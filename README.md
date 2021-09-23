@@ -24,7 +24,7 @@
 * Complete the steps in order from top to bottom\
 &nbsp;
 ## **Ubuntu:**
----
+
 &nbsp;
 >### **Tips:**
 >* Press &nbsp;``Ctrl + Alt + T`` &nbsp; to open a new terminal
@@ -35,9 +35,12 @@
 &nbsp;
 ## ***Installing Ruby:***
 ### **First we'll install some Ruby on Rails dependencies:**
-Run the following commands in your terminal:
+First we need to install curl:
 ```c
 sudo apt install curl
+```
+Then, run the following commands in your terminal:
+```c
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
@@ -51,6 +54,7 @@ This will add the &nbsp;``Yarn`` &nbsp;and&nbsp; ``Node.js``&nbsp; repositories 
 Run the following commands in your terminal:
 ```c
 cd
+sudo apt install git
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
@@ -130,10 +134,10 @@ Z6241+rYjZa5G3LLrrK1tViQxJaUsWk/VUAJJDhiuas88u2yt7ydQtF/gbBbMZQNHsu5Qw6N4BZOr9hT
 **Add the SSH key to your Github:**
 >1. Copy the output
 >2. Go to [this link](https://github.com/settings/keys)
->3. Click <button style="background-color: green; border: none; color: white; border-radius: 4px; height: 23px">New SSH key</button>
+>3. Click <button style="background-color: green; border: none; color: white; border-radius: 4px; height: 23px">``New SSH key``</button>
 >4. Enter any name under **Title**
 >5. Paste the output you copied earlier under **Key**
->6. Click <button style="background-color: green; border: none; color: white; border-radius: 4px; height: 23px">Add SSH key</button>
+>6. Click <button style="background-color: green; border: none; color: white; border-radius: 4px; height: 23px">``Add SSH key``</button>
 &nbsp;
 
 &nbsp;\
@@ -148,8 +152,8 @@ When prompted with:
     RSA key fingerprint is SHA256:nAHS..........
     Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
-&nbsp;\
-run ``yes`` in your terminal\
+
+Run ``yes`` in your terminal.\
 &nbsp;\
 &nbsp;&nbsp;\
 You should get a message like this:
@@ -167,10 +171,12 @@ gem install rails -v 6.1.4.1
 
 rbenv rehash
 ```
+&nbsp;\
 To verify the installation, run this command in your terminal:
 ```c
 rails -v
 ```
+&nbsp;\
 It should output:
 ```
 Rails 6.1.4.1
@@ -190,8 +196,32 @@ sudo apt install postgresql libpq-dev
 ### **Create a user:**
 Run the following command in your terminal:
 ```c
-sudo -u postgres createuser whoami -s
+sudo -u postgres createuser $(whoami) -s
 ```
+This will create a new user under the name of your computer.\
+&nbsp;\
+&nbsp;\
+**If you want to set a password:**
+* Get your username by running the following command:
+```
+whoami
+```
+>*This will output your username*
+
+&nbsp;
+* Then, run the following command:
+```
+sudo -u postgres psql
+```
+&nbsp;
+* In ``postgres=#``, run ``\password username``, &nbsp;replacing&nbsp; ``username`` &nbsp;with your own.
+> *e.g. if you username is chris, the command will look like this:*
+```
+postgres=# \password chris
+```
+&nbsp;
+* Now enter the new password.
+> *When you're typing, you won't be able to any characters being entered.*
 
 &nbsp;\
 &nbsp;
