@@ -11,12 +11,12 @@
       This is
       a code block
 
-  > *You can copy the entire code block at once. No need to run each command individually*
   &nbsp;
   1. Copy the commands inside the block
   2. Paste the commands in your terminal
   3. Run the commands by pressing ``Enter``\
   &nbsp;
+  >*  *You can copy the entire code block at once. No need to run each command individually*
   > * *The last command in every code block may not get run automatically. Press ``Enter`` to run the command manually.* 
   > * *If prompted with ``Do you want to continue? [Y/n]``, run ``y``*
   
