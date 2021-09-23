@@ -69,7 +69,7 @@ exec $SHELL
 rbenv install 3.0.2
 rbenv global 3.0.2
 ```
-> *This step might take a while*
+> *This step may take a while*
 
 &nbsp;
 ### **Finally, install ``bundler``:**
@@ -273,6 +273,8 @@ Run this command in your terminal:
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
+> *This step may take a while*
+
 
 &nbsp;
 ### ***Install ``Node.js``:***
@@ -302,11 +304,15 @@ Run the following commands in your terminal:
 
     rbenv install 3.0.2
     rbenv global 3.0.2
+
+> *This step may take a while*
+
 &nbsp;
 ### ***Install ``Bundler``:***
 Run the following commands in your terminal:
 
     gem install bundler
+
     rbenv rehash
 &nbsp;\
 &nbsp;
@@ -315,6 +321,7 @@ Run the following commands in your terminal:
 Run the following commands in your terminal:
 
     gem install rails -v 6.1.4.1
+
     rbenv rehash
 
 &nbsp;
@@ -351,6 +358,40 @@ postgres -V
 &nbsp;\
 It should output:
 ```
-Rails 6.1.4.1
+postgres (PostgreSQL) 13.x
 ```
 >##### *⇧Don't run this⇧*
+
+
+&nbsp;
+### **Create a user:**
+Run the following command in your terminal:
+```c
+sudo -u postgres createuser $(whoami) -s
+```
+
+&nbsp;\
+**If you want to set a password:**
+* Get your username by running the following command:
+```
+whoami
+```
+
+
+&nbsp;
+* Then, run the following command:
+```
+sudo -u postgres psql
+```
+&nbsp;
+* In ``postgres=#``, run ``\password username``, &nbsp;replacing&nbsp; ``username`` &nbsp;with your own.
+> *e.g. if you username is chris, the command will look like this:*
+```
+\password chris
+```
+&nbsp;
+* Now enter the new password.
+> *When you're typing, you won't be able to any characters being entered.*
+
+&nbsp;
+* After setting and confirming your new password, press ``Ctrl + Z`` to exit out of the postgres command line.
