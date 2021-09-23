@@ -367,31 +367,45 @@ postgres (PostgreSQL) 13.x
 ### **Create a user:**
 Run the following command in your terminal:
 ```c
-sudo -u postgres createuser $(whoami) -s
+createuser -d $(whoami)
 ```
 
 &nbsp;\
 **If you want to set a password:**
 * Get your username by running the following command:
-```
-whoami
-```
+  ```
+  whoami
+  ```
 
 
 &nbsp;
 * Then, run the following command:
-```
-sudo -u postgres psql
-```
+  ```
+  psql postgres
+  ```
 &nbsp;
 * In ``postgres=#``, run ``\password username``, &nbsp;replacing&nbsp; ``username`` &nbsp;with your own.
-> *e.g. if you username is chris, the command will look like this:*
-```
-\password chris
-```
+  > *e.g. if you username is chris, the command will look like this:*
+  ```
+  \password chris
+  ```
 &nbsp;
 * Now enter the new password.
 > *When you're typing, you won't be able to any characters being entered.*
 
 &nbsp;
 * After setting and confirming your new password, press ``Ctrl + Z`` to exit out of the postgres command line.
+
+## ***Testing your installation:***
+Create a new Rails application by running the following commands in your terminal:
+```c
+cd ~
+rails new myapp -d=postgresql #creates a new Rails app called myapp with a PostgreSQL database
+cd myapp                      #sets the working directory to the application directory
+rails db:create                #creates a new database
+rails server                  #starts the server
+```
+> *You can copy the comments as well. They will be ignored.*
+
+&nbsp;\
+Go to http://localhost:3000 to look at your new app!
