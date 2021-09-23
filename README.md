@@ -10,7 +10,8 @@
 
       This is
       a code block
-  >##### *⇧Don't run this⇧*
+      
+    >##### *⇧Don't run this⇧*
 
   &nbsp;
   1. Copy the commands inside the block
@@ -277,17 +278,13 @@ Run this command in your terminal:
 
 
 &nbsp;
-### ***Install ``Node.js``:***
+### ***Install ``Node.js`` and ``Yarn``:***
 Run the following command in your terminal:
 ```
 brew install nodejs
+brew install yarn
 ```
-&nbsp;\
-To verify the installation, run:
 
-    node -v
-
-> *This should output the version of ``Node.js`` you just installed.*
 
 &nbsp;
 ### ***Install ``rbenv``:***
@@ -400,10 +397,10 @@ createuser -d $(whoami)
 Create a new Rails application by running the following commands in your terminal:
 ```c
 cd ~
-rails new myapp -d=postgresql #creates a new Rails app called myapp with a PostgreSQL database
-cd myapp                      #sets the working directory to the application directory
-rails db:create                #creates a new database
-rails server                  #starts the server
+rails new myapp -d=postgresql
+cd myapp
+rails db:create
+rails server
 ```
 > *You can copy the comments as well. They will be ignored.*
 
