@@ -70,7 +70,7 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 exec $SHELL
 
-rbenv install 3.0.2
+rbenv install --verbose 3.0.2
 rbenv global 3.0.2
 ```
 > *This step may take a while*
@@ -302,7 +302,7 @@ Run the following commands in your terminal:
 ### ***Install ``Ruby``:***
 Run the following commands in your terminal:
 
-    rbenv install 3.0.2
+    rbenv install --verbose 3.0.2
     rbenv global 3.0.2
 
 > *This step may take a while*
