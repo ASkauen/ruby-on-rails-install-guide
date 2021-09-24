@@ -436,12 +436,12 @@ Go to http://localhost:3000 to look at your new app!
 &nbsp;
 ### ***Download and install ``Ubuntu 20.4``:***
 
-> * Go to the [Microsoft store](https://www.microsoft.com/store/productId/9N6SVWS3RX71) and download ``Ubuntu 20.04 LTS``
-> * Launch ``Ubuntu 20.04 LTS`` from the start menu
+* Go to the [Microsoft store](https://www.microsoft.com/store/productId/9N6SVWS3RX71) and download ``Ubuntu 20.04 LTS``
+* Launch ``Ubuntu 20.04 LTS`` from the start menu
+* Follow the setup
 
- \
- \
- \
- \
- \
- \
+
+&nbsp;\
+From here, just follow the [Linux guide](#linux)
+> Make sure you run the commands in the Ubuntu terminal,\
+> and not in Windows command prompt
