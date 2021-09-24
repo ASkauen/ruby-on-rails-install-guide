@@ -1,5 +1,19 @@
 # Ruby on Rails development environment setup guide
- ## ***How to follow this guide:***
+## ***Introduction:***
+This is a "Getting started with Ruby on Rails for dummies" guide.\
+The goal of this guide is to be as simple and straight forward as possible, so that anyone, regardless of computer knowledge, can set up a development environment on their system.\
+&nbsp;\
+For simplicity, this guide makes most of the choices for you.\
+Choices like ruby version, ralis version, which database to use etc.\
+&nbsp;\
+You are free to change these options to whatever you like, but that won't be covered in this guide.\
+&nbsp;\
+&nbsp;\
+*Let's begin.*\
+ &nbsp;
+
+
+## ***How to follow this guide:***
 * Choose your operating system\
     &nbsp; &nbsp; &nbsp;- [Linux](#linux)\
     &nbsp; &nbsp; &nbsp;- [MacOS](#macos)\
@@ -12,23 +26,24 @@
       a code block
       
 
-  &nbsp;
   1. Copy the commands inside the block
   2. Paste the commands in your terminal
-  3. Run the commands by pressing ``Enter``\
+  3. Run the commands by pressing ``Enter``
+   &nbsp;
   > Unless the code block has *⇧Don't run this⇧* under it
   
+  > * You can copy the entire code block at once. No need to run each command individually.
+  > * The last command in every code block may not get run automatically. Press ``Enter`` to run the command manually.
+  > * If prompted with ``Do you want to continue? [Y/n]``, run ``y``.\
   &nbsp;
-  >*  *You can copy the entire code block at once. No need to run each command individually.*
-  > * *The last command in every code block may not get run automatically. Press ``Enter`` to run the command manually.* 
-  > * *If prompted with ``Do you want to continue? [Y/n]``, run ``y``.*
+  > * If you for some reason get an error while running a block of code, try running them individually.
   
 &nbsp;
 * Complete the steps in order from top to bottom\
 &nbsp;
 ## **Linux:**
 
->##### *Tested on Ubuntu 20.4*
+>##### *Tested on Ubuntu 20.04*
 
 &nbsp;
 >### **Tips:**
@@ -40,7 +55,7 @@
 &nbsp;
 ## ***Installing ``Ruby``:***
 ### **First we'll install some Ruby on Rails dependencies:**
-First run these commands to install curl:
+First, run these commands to install curl:
 ```c
 sudo apt-get update
 sudo apt install curl
@@ -113,7 +128,7 @@ git config --global user.email "YOUR@EMAIL.com"
 ssh-keygen -t rsa -b 4096 -C "YOUR@EMAIL.com"
 ```
 &nbsp;\
-You will be prompted with
+You will be prompted with:
 
     Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa):
     Enter passphrase (empty for no passphrase):
@@ -312,20 +327,100 @@ Run the following commands in your terminal:
 
 &nbsp;
 ### ***Install ``Bundler``:***
-<<<<<<< HEAD
-Run the following commands in your terminal:
-
-    gem install bundler;
-    rbenv rehash
-=======
 Run the following command in your terminal:
 
     gem install bundler; rbenv rehash
     
->>>>>>> b41983c9e1ff275b014afb394be6443c25a2253c
 &nbsp;\
 &nbsp;
+## ***Configuring Git:***
+>**For this step you will need a Github account. [Register here](https://github.com/) if you don't have one already.** \
+>**If you already have Git configured, you can [skip this step](#installing-rails).**
 
+&nbsp;
+### **Configure username and email:**
+> These next commands should be run separately in order to replace "YOUR NAME" and "YOUR@EMAIL<span>.com</span>"\
+> with your Github username and email before running.
+
+Run the following commands in your terminal:
+
+```
+git config --global color.ui true
+```
+```
+git config --global user.name "YOUR NAME"
+```
+```
+git config --global user.email "YOUR@EMAIL.com"
+```
+```
+ssh-keygen -t rsa -b 4096 -C "YOUR@EMAIL.com"
+```
+&nbsp;\
+You will be prompted with:
+
+    Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa):
+    Enter passphrase (empty for no passphrase):
+    Enter same passphrase again:
+>##### *⇧Don't run this⇧*
+
+&nbsp;\
+You can hit ``Enter`` for all three, unless you want to configure those options.\
+&nbsp;
+### **Add SSH key:**
+Run the following command in your terminal:
+```c
+cat ~/.ssh/id_rsa.pub
+```
+
+&nbsp;\
+The output should look something like this:
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDds5vtGDIppyR6qsyf+m0xYfq2WxieBBBlZBrZo4Ku9KpjVtY1v7I
+6fLUgtJsxzuMMoxUwav1FG4gqkiSE26PCm1gBmlYuRxIV5XvYZRmVhkapPerLGCf1KQUhCU/9qxivSNDYo
+zj5DxQjxIeF3THXFvijLtLtpFfA68ZoFbfakM672md7dyn0JTSugYzToQR48mLbKcFYGbfF2XjGLnFYePFV4
+UYEaIO6oo1mq4oMZ9Qqsa25Nq6yLL4AO+tOcZzEV6Qt9iRlRCUg/FZ5CFHb6w/joOZlE2H3CilOV/q3XTfs
++iqhhsK0i7cuJMGljpaysDOIJDPjsd9uasjdoasdoDAUH12pDH990adDSJ8Qg6YkNWWh/qLEy+jiTZVNXVbJAllOaMQSmkE7/
+Z6241+rYjZa5G3LLrrK1tViQxJaUsWk/VUAJJDhiuas88u2yt7ydQtF/gbBbMZQNHsu5Qw6N4BZOr9hTez+txosovDb20rE2
++oPdM= your@email.com
+```
+>##### *⇧Don't run this⇧*
+&nbsp;\
+**Add the SSH key to your Github:**
+>1. Copy the output
+>2. Go to [this link](https://github.com/settings/keys)
+>3. Click <button style="background-color: green; border: none; color: white; border-radius: 4px; height: 23px">``New SSH key``</button>
+>4. Enter any name under **Title**
+>5. Paste the output you copied earlier under **Key**
+>6. Click <button style="background-color: green; border: none; color: white; border-radius: 4px; height: 23px">``Add SSH key``</button>
+&nbsp;
+
+&nbsp;\
+To verify that it worked, run this command in your terminal:
+```c
+ssh -T git@github.com
+```
+&nbsp;\
+When prompted with:
+
+    The authenticity of host 'github.com (140.82.121.4)' can't be established.
+    RSA key fingerprint is SHA256:nAHS..........
+    Are you sure you want to continue connecting (yes/no/[fingerprint])?
+
+>##### *⇧Don't run this⇧*
+
+&nbsp;\
+Run ``yes`` in your terminal.\
+&nbsp;\
+&nbsp;\
+You should get a message like this:
+```
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+```
+>##### *⇧Don't run this⇧*
+
+&nbsp;\
+&nbsp;
 ## **Installing ``Rails``:**
 Run the following commands in your terminal:
 
@@ -442,10 +537,9 @@ Go to http://localhost:3000 to look at your new app!
 
 &nbsp;\
 From here, just follow the [Linux guide](#linux).  ***But first:***
-> Make sure you run the commands in the Ubuntu terminal,\
-> and not in Windows command prompt
+> Make sure you run the commands in the Ubuntu terminal, not in Windows command prompt
 
 In order for copy/paste to work in the WSL terminal, you need to enable it in properties:
-* Right click the title bar of the WSL
+* Right click the title bar of the WSL terminal
 * Click ``Properties``
 * Enable ``Use Ctrl+Shift+C/V as Copy/Paste``
