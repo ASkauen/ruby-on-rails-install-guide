@@ -206,9 +206,12 @@ Rails 6.1.4.1
 &nbsp;
 ## ***Setting up PostgreSQL:***
 ### **Install ``PostgreSQL``:**
-Run the following commands in your terminal:
+Run the following command in your terminal:
 ```c
 sudo apt install postgresql libpq-dev;
+```
+Then start the postgres server:
+```
 sudo service postgresql start
 ```
 &nbsp;
