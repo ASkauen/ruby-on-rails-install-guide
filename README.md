@@ -11,12 +11,13 @@
       This is
       a code block
       
-    >##### *⇧Don't run this⇧*
 
   &nbsp;
   1. Copy the commands inside the block
   2. Paste the commands in your terminal
   3. Run the commands by pressing ``Enter``\
+  > Unless the code block has *⇧Don't run this⇧* under it
+  
   &nbsp;
   >*  *You can copy the entire code block at once. No need to run each command individually.*
   > * *The last command in every code block may not get run automatically. Press ``Enter`` to run the command manually.* 
@@ -205,9 +206,10 @@ Rails 6.1.4.1
 &nbsp;
 ## ***Setting up PostgreSQL:***
 ### **Install ``PostgreSQL``:**
-Run the following command in your terminal:
+Run the following commands in your terminal:
 ```c
 sudo apt install postgresql libpq-dev
+sudo service postgresql start
 ```
 &nbsp;
 ### **Create a user:**
@@ -218,14 +220,8 @@ sudo -u postgres createuser $(whoami) -s
 
 &nbsp;\
 **If you want to set a password:**
-* Get your username by running the following command:
-```
-whoami
-```
 
-
-&nbsp;
-* Then, run the following command:
+*  Run the following command in your terminal:
 ```
 sudo -u postgres psql
 ```
@@ -426,7 +422,7 @@ Go to http://localhost:3000 to look at your new app!
 ### ***Enable ``WSL``:***
 * Run command prompt as administrator
    * Search "cmd" in the start menu
-   * Right click ``Command promt`` and click "Run as Administrator"
+   * Right click ``Command promt`` and click ``Run as Administrator``
 * Run the following command in command prompt:
 
         dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -434,7 +430,7 @@ Go to http://localhost:3000 to look at your new app!
 * Restart your computer
 
 &nbsp;
-### ***Download and install ``Ubuntu 20.4``:***
+### ***Download and install ``Ubuntu 20.4`` WSL:***
 
 * Go to the [Microsoft store](https://www.microsoft.com/store/productId/9N6SVWS3RX71) and download ``Ubuntu 20.04 LTS``
 * Launch ``Ubuntu 20.04 LTS`` from the start menu
@@ -442,6 +438,11 @@ Go to http://localhost:3000 to look at your new app!
 
 
 &nbsp;\
-From here, just follow the [Linux guide](#linux)
+From here, just follow the [Linux guide](#linux).  ***But first:***
 > Make sure you run the commands in the Ubuntu terminal,\
 > and not in Windows command prompt
+
+In order for copy/paste to work in the WSL terminal, you need to enable it in properties:
+* Right click the title bar of the WSL
+* Click ``Properties``
+* Enable ``Use Ctrl+Shift+C/V as Copy/Paste``
