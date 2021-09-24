@@ -517,6 +517,14 @@ Go to http://localhost:3000 to look at your new app!
 &nbsp;\
 &nbsp;
 ## **Windows 10:**
+### ***Switch from ``CRLF`` to ``LF`` in your editor:***
+Windows uses ``CRLF`` (``\r\n``) to denote the end of a line. All other systems use ``LF``. (``\n``)\
+Therefore, you'll need to change this setting in your editor to prevent conflicts when working with other devs who don't use Windows.\
+&nbsp;\
+#### **For VS Code:**
+&nbsp;\
+This process isn't always the same across different editors, so 
+&nbsp;
 ### ***Enable ``WSL``:***
 * Run command prompt as administrator
    * Search "cmd" in the start menu
