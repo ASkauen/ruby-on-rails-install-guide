@@ -423,3 +423,25 @@ Go to http://localhost:3000 to look at your new app!
 &nbsp;\
 &nbsp;
 ## **Windows 10:**
+### ***Enable ``WSL``:***
+* Run command prompt as administrator
+   * Search "cmd" in the start menu
+   * Right click ``Command promt`` and click "Run as Administrator"
+* Run the following command in command prompt:
+
+        dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+* Restart your computer
+
+&nbsp;
+### ***Download and install ``Ubuntu 20.4``:***
+
+> * Go to the [Microsoft store](https://www.microsoft.com/store/productId/9N6SVWS3RX71) and download ``Ubuntu 20.04 LTS``
+> * Launch ``Ubuntu 20.04 LTS`` from the start menu
+
+ \
+ \
+ \
+ \
+ \
+ \
