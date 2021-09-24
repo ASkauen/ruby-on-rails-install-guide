@@ -313,10 +313,17 @@ Run the following commands in your terminal:
 
 &nbsp;
 ### ***Install ``Bundler``:***
+<<<<<<< HEAD
 Run the following commands in your terminal:
 
     gem install bundler;
     rbenv rehash
+=======
+Run the following command in your terminal:
+
+    gem install bundler; rbenv rehash
+    
+>>>>>>> b41983c9e1ff275b014afb394be6443c25a2253c
 &nbsp;\
 &nbsp;
 
