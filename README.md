@@ -18,14 +18,16 @@
   2. Paste the commands in your terminal
   3. Run the commands by pressing ``Enter``\
   &nbsp;
-  >*  *You can copy the entire code block at once. No need to run each command individually*
+  >*  *You can copy the entire code block at once. No need to run each command individually.*
   > * *The last command in every code block may not get run automatically. Press ``Enter`` to run the command manually.* 
-  > * *If prompted with ``Do you want to continue? [Y/n]``, run ``y``*
+  > * *If prompted with ``Do you want to continue? [Y/n]``, run ``y``.*
   
 &nbsp;
 * Complete the steps in order from top to bottom\
 &nbsp;
 ## **Linux:**
+
+>##### *Tested on Ubuntu 20.4*
 
 &nbsp;
 >### **Tips:**
@@ -171,6 +173,7 @@ You should get a message like this:
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 >##### *⇧Don't run this⇧*
+
 &nbsp;\
 &nbsp;
 
@@ -234,7 +237,7 @@ sudo -u postgres psql
 ```
 &nbsp;
 * Now enter the new password.
-> *When you're typing, you won't be able to any characters being entered.*
+> *When you're typing, you won't be able to see any characters being entered.*
 
 &nbsp;
 * After setting and confirming your new password, press ``Ctrl + Z`` to exit out of the postgres command line.
@@ -244,20 +247,24 @@ sudo -u postgres psql
 ## ***Testing your installation:***
 Create a new Rails application by running the following commands in your terminal:
 ```c
-rails new myapp -d postgresql #creates a new Rails app called myapp with a PostgreSQL database
-cd myapp                      #sets the working directory to the application directory
-rake db:create                #creates a new database
-rails server                  #starts the server
+rails new myapp -d postgresql
+cd myapp
+rake db:create
+rails server
 ```
-> *You can copy the comments as well. They will be ignored.*
+
 
 &nbsp;\
 Go to http://localhost:3000 to look at your new app!
+
+#### *That's it! Now you're ready to start developing with Ruby on Rails.*
 
 &nbsp;\
 &nbsp;\
 &nbsp;
 ## **MacOS:**
+
+>##### *Tested on MacOS Catalina 10.15*
 
 &nbsp;
 >### **Tips:**
@@ -279,7 +286,7 @@ Run this command in your terminal:
 
 &nbsp;
 ### ***Install ``Node.js`` and ``Yarn``:***
-Run the following command in your terminal:
+Run the following commands in your terminal:
 ```
 brew install nodejs
 brew install yarn
@@ -308,8 +315,7 @@ Run the following commands in your terminal:
 ### ***Install ``Bundler``:***
 Run the following commands in your terminal:
 
-    gem install bundler
-
+    gem install bundler;
     rbenv rehash
 &nbsp;\
 &nbsp;
@@ -318,7 +324,6 @@ Run the following commands in your terminal:
 Run the following commands in your terminal:
 
     gem install rails -v 6.1.4.1
-
     rbenv rehash
 
 &nbsp;
@@ -339,7 +344,7 @@ Rails 6.1.4.1
 
 &nbsp;\
 &nbsp;
-## ***Installing ``PostgreSQL``***
+## ***Installing ``PostgreSQL``:***
 
 Run the following commands in your terminal:
 
@@ -348,6 +353,7 @@ Run the following commands in your terminal:
     source ~/.bash_profile
     brew services start postgresql@13
 
+&nbsp;\
 To verify the installation, run this command in your terminal:
 ```c
 postgres -V
@@ -359,24 +365,20 @@ postgres (PostgreSQL) 13.x
 ```
 >##### *⇧Don't run this⇧*
 
+&nbsp;
+>A postgres user will be automatically created under your username
 
 &nbsp;
-### **Create a user:**
-Run the following command in your terminal:
+### **To create a new user:**
+Run the following command in your terminal, replacing ``username`` with your own:
 ```c
-createuser -d $(whoami)
+createuser -d username
 ```
 
 &nbsp;\
 **If you want to set a password:**
-* Get your username by running the following command:
-  ```
-  whoami
-  ```
 
-
-&nbsp;
-* Then, run the following command:
+* Run the following command:
   ```
   psql postgres
   ```
@@ -388,11 +390,13 @@ createuser -d $(whoami)
   ```
 &nbsp;
 * Now enter the new password.
-> *When you're typing, you won't be able to any characters being entered.*
+  > *When you're typing, you won't be able to see any characters being entered.*
 
 &nbsp;
 * After setting and confirming your new password, press ``Ctrl + Z`` to exit out of the postgres command line.
 
+&nbsp;\
+&nbsp;
 ## ***Testing your installation:***
 Create a new Rails application by running the following commands in your terminal:
 ```c
@@ -402,7 +406,13 @@ cd myapp
 rails db:create
 rails server
 ```
-> *You can copy the comments as well. They will be ignored.*
 
 &nbsp;\
 Go to http://localhost:3000 to look at your new app!
+
+#### *That's it! Now you're ready to start developing with Ruby on Rails.*
+
+&nbsp;\
+&nbsp;\
+&nbsp;
+## **Windows 10:**
