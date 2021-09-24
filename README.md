@@ -210,7 +210,7 @@ Run the following command in your terminal:
 ```c
 sudo apt install postgresql libpq-dev;
 ```
-Then start the postgres server:
+If you're installing on a Windows WSL, you have to start the postgres server:
 ```
 sudo service postgresql start
 ```
