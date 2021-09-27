@@ -20,24 +20,22 @@ You are free to change these options to whatever you like, but that won't be cov
     &nbsp; &nbsp; &nbsp;- [Windows 10](#windows-10)
 * Read the instructions under your chosen oparating system
 
-    &nbsp; &nbsp; When you come across a code block:
-
+    * When you come across a code block:
+    ```
       This is
       a code block
-      
+    ```  
 
-  1. Copy the commands inside the block
-  2. Paste the commands in your terminal
-  3. Run the commands by pressing ``Enter``
-   &nbsp;
-  > Unless the code block has *⇧Don't run this⇧* under it
+    1. Copy the commands inside the block
+    2. Paste the commands in your terminal
+    3. Run the commands by pressing ``Enter``
+    > Unless the code block has *⇧Don't run this⇧* under it
 
-  &nbsp;
-  * You can copy the entire code block at once. No need to run each command individually.
-  * The last command in every code block may not get run automatically. Press ``Enter`` to run the command manually.
-  * If prompted with ``Do you want to continue? [Y/n]``, run ``y``.\
-  &nbsp;
-  * If you for some reason get an error while running a block of code, try running them individually.
+    * Some tips:
+      * You can copy the entire code block at once. No need to run each command individually.
+      * The last command in every code block may not get run automatically. Press ``Enter`` to run the command manually.
+      * If prompted with ``Do you want to continue? [Y/n]``, run ``y``.
+      * If you for some reason get an error while running a block of code, try running them individually.
   
 &nbsp;
 * Complete the steps in order from top to bottom\
@@ -240,18 +238,18 @@ sudo -u postgres createuser $(whoami) -s
 **If you want to set a password:**
 
 *  Run the following command in your terminal:
-```
+    ```
 sudo -u postgres psql
-```
+    ```
 &nbsp;
 * In ``postgres=#``, run "``\password username``", &nbsp;replacing&nbsp; ``username`` &nbsp;with your own.
-> *e.g. if you username is chris, the command will look like this:*
-```
-\password chris
-```
+    > *e.g. if you username is chris, the command will look like this:*
+    ```
+    \password chris
+    ```
 &nbsp;
 * Now enter the new password.
-> *When you're typing, you won't be able to see any characters being entered.*
+    > *When you're typing, you won't be able to see any characters being entered.*
 
 &nbsp;
 * After setting and confirming your new password, press ``Ctrl + Z`` to exit out of the postgres command line.
@@ -558,7 +556,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 
 
 &nbsp;\
-From here, just follow the [Linux guide](#linux).  ***But first:***
+From here, just follow the [Linux guide](#linux). ***But first:***
 * Make sure you run the commands in the Ubuntu terminal, not in Windows command prompt
 
 * In order for copy/paste to work in the WSL terminal, you need to enable it in properties:
