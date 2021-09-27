@@ -31,12 +31,13 @@ You are free to change these options to whatever you like, but that won't be cov
   3. Run the commands by pressing ``Enter``
    &nbsp;
   > Unless the code block has *⇧Don't run this⇧* under it
-  
-  > * You can copy the entire code block at once. No need to run each command individually.
-  > * The last command in every code block may not get run automatically. Press ``Enter`` to run the command manually.
-  > * If prompted with ``Do you want to continue? [Y/n]``, run ``y``.\
+
   &nbsp;
-  > * If you for some reason get an error while running a block of code, try running them individually.
+  * You can copy the entire code block at once. No need to run each command individually.
+  * The last command in every code block may not get run automatically. Press ``Enter`` to run the command manually.
+  * If prompted with ``Do you want to continue? [Y/n]``, run ``y``.\
+  &nbsp;
+  * If you for some reason get an error while running a block of code, try running them individually.
   
 &nbsp;
 * Complete the steps in order from top to bottom\
@@ -110,8 +111,7 @@ Now, onto the next step.\
 
 &nbsp;
 ### **Configure username and email:**
-> These next commands should be run separately in order to replace "YOUR NAME" and "YOUR@EMAIL<span>.com</span>"\
-> with your Github username and email before running.
+> These next commands should be run separately in order to replace "YOUR NAME" and "YOUR@EMAIL<span>.com</span>" with your Github username and email before running.
 
 Run the following commands in your terminal:
 
@@ -181,7 +181,7 @@ When prompted with:
 >##### *⇧Don't run this⇧*
 
 &nbsp;\
-Run ``yes`` in your terminal.\
+Run "``yes``" in your terminal.\
 &nbsp;\
 &nbsp;&nbsp;\
 You should get a message like this:
@@ -225,7 +225,7 @@ Run the following command in your terminal:
 ```c
 sudo apt install postgresql libpq-dev;
 ```
-If you're installing on a Windows WSL, you have to start the postgres server:
+If you're installing on a Windows WSL, you will have to start the postgres server:
 ```
 sudo service postgresql start
 ```
@@ -244,7 +244,7 @@ sudo -u postgres createuser $(whoami) -s
 sudo -u postgres psql
 ```
 &nbsp;
-* In ``postgres=#``, run ``\password username``, &nbsp;replacing&nbsp; ``username`` &nbsp;with your own.
+* In ``postgres=#``, run "``\password username``", &nbsp;replacing&nbsp; ``username`` &nbsp;with your own.
 > *e.g. if you username is chris, the command will look like this:*
 ```
 \password chris
@@ -285,6 +285,8 @@ Go to http://localhost:3000 to look at your new app!
 >* Search for "Terminal" in spotlight search to open a new terminal
 >* Press &nbsp;``Command + V`` &nbsp; to paste text in your terminal
 >* Press &nbsp;``Command + C`` &nbsp; to copy text from your terminal\
+&nbsp;
+
 &nbsp;
 
 ## ***Installing ``Ruby``:***
@@ -339,8 +341,7 @@ Run the following command in your terminal:
 
 &nbsp;
 ### **Configure username and email:**
-> These next commands should be run separately in order to replace "YOUR NAME" and "YOUR@EMAIL<span>.com</span>"\
-> with your Github username and email before running.
+> These next commands should be run separately in order to replace "YOUR NAME" and "YOUR@EMAIL<span>.com</span>" with your Github username and email before running.
 
 Run the following commands in your terminal:
 
@@ -366,6 +367,7 @@ You will be prompted with:
 
 &nbsp;\
 You can hit ``Enter`` for all three, unless you want to configure those options.\
+&nbsp;\
 &nbsp;
 ### **Add SSH key:**
 Run the following command in your terminal:
@@ -517,6 +519,7 @@ Go to http://localhost:3000 to look at your new app!
 &nbsp;\
 &nbsp;
 ## **Windows 10:**
+
 ### ***Switch from ``CRLF`` to ``LF`` in your editor:***
 Windows uses ``CRLF`` (``\r\n``) to denote the end of a line. All other systems use ``LF`` (``\n``).\
 Therefore, you'll need to change this setting in your editor to prevent conflicts when working with other devs who don't use Windows.\
