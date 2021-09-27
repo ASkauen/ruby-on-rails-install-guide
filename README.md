@@ -522,17 +522,28 @@ Windows uses ``CRLF`` (``\r\n``) to denote the end of a line. All other systems 
 Therefore, you'll need to change this setting in your editor to prevent conflicts when working with other devs who don't use Windows.\
 &nbsp;
 #### **For VS Code:**
+* Inside VS Code, press ``Ctrl + Shift + P``
+* Search for "settings"
+* Click ``Preferences: Open Settings (JSON)``
+* Add the following line at the top of the settings.json file:
+
+        "files.eol": "\n",
+
+>This will not change the line endings for existing files, but all new files will now use the ``LF`` line ending.
+
 &nbsp;\
-This process isn't always the same across different editors, so 
+This process isn't always the same across different editors, so use google to find out how to do it in your editor.
+> e.g if you're using Sublime, google: "``sublime change crlf to lf``".
+
 &nbsp;
 ### ***Enable ``WSL``:***
 * Run command prompt as administrator
    * Search "cmd" in the start menu
    * Right click ``Command promt`` and click ``Run as Administrator``
 * Run the following command in command prompt:
-
-        dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all
+```
 * Restart your computer
 
 &nbsp;
@@ -545,9 +556,9 @@ This process isn't always the same across different editors, so
 
 &nbsp;\
 From here, just follow the [Linux guide](#linux).  ***But first:***
-> Make sure you run the commands in the Ubuntu terminal, not in Windows command prompt
+* Make sure you run the commands in the Ubuntu terminal, not in Windows command prompt
 
-In order for copy/paste to work in the WSL terminal, you need to enable it in properties:
-* Right click the title bar of the WSL terminal
-* Click ``Properties``
-* Enable ``Use Ctrl+Shift+C/V as Copy/Paste``
+* In order for copy/paste to work in the WSL terminal, you need to enable it in properties:
+    * Right click the title bar of the WSL terminal
+    * Click ``Properties``
+    * Enable ``Use Ctrl+Shift+C/V as Copy/Paste``
