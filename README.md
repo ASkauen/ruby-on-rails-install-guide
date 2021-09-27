@@ -518,9 +518,9 @@ Go to http://localhost:3000 to look at your new app!
 &nbsp;
 ## **Windows 10:**
 ### ***Switch from ``CRLF`` to ``LF`` in your editor:***
-Windows uses ``CRLF`` (``\r\n``) to denote the end of a line. All other systems use ``LF``. (``\n``)\
+Windows uses ``CRLF`` (``\r\n``) to denote the end of a line. All other systems use ``LF`` (``\n``).\
 Therefore, you'll need to change this setting in your editor to prevent conflicts when working with other devs who don't use Windows.\
-&nbsp;\
+&nbsp;
 #### **For VS Code:**
 &nbsp;\
 This process isn't always the same across different editors, so 
@@ -536,7 +536,7 @@ This process isn't always the same across different editors, so
 * Restart your computer
 
 &nbsp;
-### ***Download and install ``Ubuntu 20.4`` WSL:***
+### ***Download and install ``Ubuntu 20.04`` WSL:***
 
 * Go to the [Microsoft store](https://www.microsoft.com/store/productId/9N6SVWS3RX71) and download ``Ubuntu 20.04 LTS``
 * Launch ``Ubuntu 20.04 LTS`` from the start menu
