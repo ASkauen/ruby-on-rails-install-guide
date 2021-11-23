@@ -238,9 +238,9 @@ sudo -u postgres createuser $(whoami) -s
 **If you want to set a password:**
 
 *  Run the following command in your terminal:
-    ```
+```
 sudo -u postgres psql
-    ```
+```
 &nbsp;
 * In ``postgres=#``, run "``\password username``", &nbsp;replacing&nbsp; ``username`` &nbsp;with your own.
     > *e.g. if you username is chris, the command will look like this:*
